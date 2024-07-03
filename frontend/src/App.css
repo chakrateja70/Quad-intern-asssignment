@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    background-color: #fff; 
+    color: #333; 
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #333; 
+}
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 8px;
+}
+#sort-criterion {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: none;
+    outline: none;
+    background-color: #f0f0f0; 
+    color: #333; 
+}
+
+#sort-criterion:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#sort-criterion.dark-mode {
+    background-color: #333; 
+    color: #fff; 
+}
+
+#sort-criterion option {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+#sort-criterion.dark-mode option {
+    background-color: #333;
+    color: #fff;
+}
+
+#sort-criterion:hover {
+    background-color: #e0e0e0;
+}
+
+#sort-criterion.dark-mode:hover {
+    background-color: #555;
+}
+
+.dropdown-container::after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #333; 
+}
+
+#crypto-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#crypto-table th, #crypto-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#crypto-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333; 
+}
+
+#crypto-table.dark-mode th {
+    background-color: #333; 
+    color: #fff; 
+}
+
+#crypto-table tbody tr:hover {
+    background-color: #2168ba;
+    transition: background-color 0.3s ease;
+}
+
+#crypto-table.dark-mode tbody tr:hover {
+    background-color: #666; 
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    #sort-criterion {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #crypto-table th, #crypto-table td {
+        font-size: 14px;
+    }
+}
+
+
+body.dark-mode {
+    background: #1a1a1a;
+    color: #ccc;
+}
+
+.container.dark-mode {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode h1 {
+    color: #fff;                
+}
+
+.dropdown-container.dark-mode::after {
+    color: #fff;
+}
+
+.theme-btn {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #a8b46c;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 80px;
+    outline: none;
+}
+
+.theme-btn:hover, #sort-criterion:hover {
+    filter: brightness(85%);
+  }
+  
+  .theme-btn:focus, #sort-criterion:focus {
+    outline: 2px solid #a8b46c; 
+  }
